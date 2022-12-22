@@ -1,3 +1,4 @@
+// Importing the needed hooks from react
 import {
   useState,
   useRef
@@ -11,35 +12,42 @@ The returned object will persist for the full lifetime of the component.
 */
 
 function App() { 
+  // Declaring and initializing the hooks
   const inputRef = useRef(null); // inputRef = {current: null}
   const resultRef = useRef(null); //resultRef = {current: null}
   const [result, setResult] = useState(0); // result = 0
  
+  // plus function adds the current value inside the input box to the final result and sets the new result
   function plus(e) { 
     e.preventDefault(); 
     setResult((result) => result + Number(inputRef.current.value)); 
   }; 
  
+  // minus function subtracts the current value inside the input box from the final result and sets the new result
   function minus(e) { 
     e.preventDefault(); 
     setResult((result) => result - Number(inputRef.current.value));
   };
  
+  // times function multiplies the current value inside the input box by the final result and sets the new result
   function times(e) { 
     e.preventDefault(); 
     setResult((result) => result * Number(inputRef.current.value));
   }; 
  
+  // divide function divides the final result by the current value inside the input box and sets the new result
   function divide(e) { 
     e.preventDefault(); 
     setResult((result) => result / Number(inputRef.current.value)); 
   };
  
+  // resetInput function sets the current value inside the input box to zero
   function resetInput(e) { 
     e.preventDefault(); 
     inputRef.current.value = null;
   }; 
  
+  // resetResult function resets the final result to zero
   function resetResult(e) { 
     e.preventDefault(); 
     setResult((result) => result = 0);
