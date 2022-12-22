@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-The calculator app code logic can be found in "App.js" file inside the "src" folder.
+The calculator app code logic can be found in "App.js" file inside the "src" folder.  
 The calculator app styling can be found in "App.css" file inside the "src" folder.
 
 ## Available Scripts
